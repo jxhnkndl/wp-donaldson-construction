@@ -3,3 +3,10 @@
 
 # Plugins
 /wp-content/plugins
+
+# DS_Store
+.DS_Store
+**/.DS_Store
+
+# node_modules
+node_modules

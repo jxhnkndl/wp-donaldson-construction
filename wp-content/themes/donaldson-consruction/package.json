@@ -1,0 +1,21 @@
+{
+  "name": "donaldson-consruction",
+  "version": "1.0.0",
+  "description": "Donaldson Construction LLC is a commercial construction company operating in Central Virginia",
+  "scripts": {
+    "watch": "sass --watch ./sass/main.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jxhnkndl/wp-donaldson-construction.git"
+  },
+  "author": "J.K. Royston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jxhnkndl/wp-donaldson-construction/issues"
+  },
+  "homepage": "https://github.com/jxhnkndl/wp-donaldson-construction#readme",
+  "devDependencies": {
+    "sass": "^1.79.4"
+  }
+}
