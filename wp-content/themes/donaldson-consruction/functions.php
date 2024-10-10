@@ -12,6 +12,13 @@
   add_action( 'init', 'dc_remove_default_fields' );
 
 
+  // Install theme support
+  function dc_install_theme_support() {
+    add_theme_support( 'title-tag' );
+  }
+
+  add_action( 'after_setup_theme', 'dc_install_theme_support' );
+
   // Enqueue styles
   function dc_enqueue_styles() {
     wp_enqueue_style(
