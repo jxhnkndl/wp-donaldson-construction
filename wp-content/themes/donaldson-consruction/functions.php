@@ -3,6 +3,7 @@
 
   // Remove default Wordpress fields to make room for advanced custom fields
   function dc_remove_default_fields() {
+    remove_post_type_support( 'career', 'editor' );
     remove_post_type_support( 'page', 'editor' );
     remove_post_type_support( 'post', 'editor' );
     remove_post_type_support( 'project', 'editor' );
