@@ -49,47 +49,4 @@
 
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );
 
-
-  // Register custom post tyes
-  function dc_register_custom_post_types() {
-    register_post_type('project', array(
-      'labels' => array(
-        'name' => 'Projects',
-        'singular_name' => 'project',
-        'add_new' => 'Add New',
-        'add_new_item' => 'Add New Project',
-        'edit_item' => 'Edit Project',
-        'new_item' => 'New Project',
-        'view_item' => 'View Project',
-        'not_found' => 'No Projects Found',
-        'all_items' => 'All Projects',
-        'archives' => 'Project Archives'
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array( 'slug', 'projects' ),
-      'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
-    ));
-
-    register_post_type('testimonial', array(
-      'labels' => array(
-        'name' => 'Testimonials',
-        'singular_name' => 'testimonial',
-        'add_new' => 'Add New',
-        'add_new_item' => 'Add New Testimonial',
-        'edit_item' => 'Edit Testimonial',
-        'new_item' => 'New Testimonial',
-        'view_item' => 'View Testimonial',
-        'not_found' => 'No Testimonials Found',
-        'all_items' => 'All Testimonials',
-        'archives' => 'Testimonial Archives'
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array( 'slug', 'testimonials' ),
-      'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
-    ));
-  }
-
-  add_action( 'init', 'dc_register_custom_post_types' );
 ?>
