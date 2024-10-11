@@ -26,7 +26,7 @@
   function dc_enqueue_styles() {
     wp_enqueue_style(
       'dc-custom-styles',
-      get_template_directory_uri() . "/style.css",
+      get_template_directory_uri() . "/assets/css/style.css",
       array(),
       $version,
       'all'
@@ -34,4 +34,18 @@
   }
 
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_styles' );
+
+
+  // Enqueue scripts
+  function dc_enqueue_scripts() {
+    wp_enqueue_script(
+      'dc-hero-slider',
+      get_template_directory_uri() . '/assets/js/hero-slider.js',
+      array(),
+      $version,
+      true
+    );
+  }
+
+  add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );
 ?>
