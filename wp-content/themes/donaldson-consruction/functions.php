@@ -70,6 +70,25 @@
       'rewrite' => array( 'slug', 'projects' ),
       'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
     ));
+
+    register_post_type('testimonial', array(
+      'labels' => array(
+        'name' => 'Testimonials',
+        'singular_name' => 'testimonial',
+        'add_new' => 'Add New',
+        'add_new_item' => 'Add New Testimonial',
+        'edit_item' => 'Edit Testimonial',
+        'new_item' => 'New Testimonial',
+        'view_item' => 'View Testimonial',
+        'not_found' => 'No Testimonials Found',
+        'all_items' => 'All Testimonials',
+        'archives' => 'Testimonial Archives'
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array( 'slug', 'testimonials' ),
+      'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+    ));
   }
 
   add_action( 'init', 'dc_register_custom_post_types' );
