@@ -6,6 +6,7 @@
     remove_post_type_support( 'page', 'editor' );
     remove_post_type_support( 'post', 'editor' );
     remove_post_type_support( 'project', 'editor' );
+    remove_post_type_support( 'team-member', 'editor' );
     remove_post_type_support( 'testimonial', 'editor' );
   }
 
@@ -19,6 +20,7 @@
 
   add_action( 'after_setup_theme', 'dc_install_theme_support' );
 
+  
   // Enqueue styles
   function dc_enqueue_styles() {
     wp_enqueue_style(
