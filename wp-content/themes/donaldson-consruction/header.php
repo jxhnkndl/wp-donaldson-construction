@@ -15,7 +15,9 @@
         </div>
       </div>
       <div class="logo-container">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/dc-brandmark.png'; ?>" />
+        <a href="<?php echo get_home_url(); ?>">
+          <img src="<?php echo get_template_directory_uri() . '/assets/images/dc-brandmark.png'; ?>" />
+        </a>
       </div>
     </div>
   </header>
