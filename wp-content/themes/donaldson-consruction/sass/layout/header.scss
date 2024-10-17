@@ -1,0 +1,51 @@
+header {
+  background: $color_primary-dark;
+  background: linear-gradient(90deg, $color_primary-dark 0%, $color_secondary-dark 70%, $color-secondary 100%);
+  height: clamp(3.75rem, 3.419rem + 0.882vw, 4.125rem);
+
+  .navbar {
+    align-items: center;
+    display: flex;
+    height: 100%;
+
+    .menu-container {
+      align-items: center;
+      background-color: $color_black;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      width: clamp(4.688rem, 2.206rem + 6.618vw, 7.5rem);
+
+      .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .menu-bar {
+          background-color: $color_white;
+          border-radius: 2px;
+          height: 2px;
+  
+          &-top {
+            width: 40px;
+          }
+  
+          &-bottom {
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .logo-container {
+      padding-left: 1.25rem;
+      width: clamp(10rem, 8.897rem + 2.941vw, 11.25rem);
+
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}

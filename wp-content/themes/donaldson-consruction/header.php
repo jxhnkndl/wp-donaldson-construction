@@ -7,5 +7,15 @@
 </head>
 <body>
   <header>
-    <h3>HEADER</h3>
+    <div class="navbar">
+      <div class="menu-container">
+        <div class="menu-icon">
+          <div class="menu-bar menu-bar-top"></div>
+          <div class="menu-bar menu-bar-bottom"></div>
+        </div>
+      </div>
+      <div class="logo-container">
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/dc-brandmark.png'; ?>" />
+      </div>
+    </div>
   </header>
