@@ -8,6 +8,29 @@
   padding: 0;
 }
 
+body {
+  background-color: #f2ece5;
+  color: #312e2b;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.25rem;
+}
+
+.content-section {
+  margin: 4.5rem 2rem 7rem 2rem;
+  position: relative;
+}
+
+.content-container {
+  margin: 0 auto;
+  width: 1240px;
+}
+
 header {
   background: #f27406;
   background: linear-gradient(90deg, #f27406 0%, #f29f04 70%, #f2b703 100%);

@@ -5,3 +5,23 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: $color_primary-pale;
+  color: $color_black;
+}
+
+h1,
+h2 {
+  @include section-heading;
+}
+
+.content-section {
+  margin: 4.5rem 2rem 7rem 2rem;
+  position: relative;
+}
+
+.content-container {
+  margin: 0 auto;
+  width: $main-content-container;
+}

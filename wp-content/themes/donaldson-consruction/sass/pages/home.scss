@@ -1,0 +1,12 @@
+// Hero slider
+.img-slide {
+  height: 50vh;
+
+  @include screen-md {
+    height: 100vh;
+  }
+
+  @include screen-lg {
+    height: 75vh;
+  }
+}

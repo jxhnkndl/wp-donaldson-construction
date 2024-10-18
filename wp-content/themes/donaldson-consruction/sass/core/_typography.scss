@@ -13,15 +13,6 @@
   font-family: $font_primary;
   font-size: 3rem;
   font-weight: 500;
-  letter-spacing: 0.25rem;
-  line-height: 3.25rem;
-}
-
-@mixin brand-block-heading {
-  font-family: $font_secondary;
-  font-size: 3rem;
-  font-weight: 500;
-  letter-spacing: 0.25px;
   line-height: 3.25rem;
 }
 
