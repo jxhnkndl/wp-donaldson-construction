@@ -1,0 +1,31 @@
+.btn {
+  @include button-text;
+
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 4rem;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    color: $color_black;
+  }
+
+
+  &-full {
+    width: 100%;
+  }
+
+  &-dark {
+    background-color: $color_black;
+    border: 1px solid $color_black;
+    color: $color_white;
+  }
+
+  &-secondary {
+    background-color: $color_secondary;
+    border: 1px solid $color_secondary;
+    color: $color_black;
+  }
+}

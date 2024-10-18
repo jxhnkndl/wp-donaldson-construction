@@ -31,8 +31,8 @@ p {
 
 button {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.25rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .content-section {
@@ -94,6 +94,34 @@ header .navbar .logo-container img {
   width: 100%;
 }
 
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 4rem;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #312e2b;
+}
+.btn-full {
+  width: 100%;
+}
+.btn-dark {
+  background-color: #312e2b;
+  border: 1px solid #312e2b;
+  color: #f2f2f2;
+}
+.btn-secondary {
+  background-color: #f2b703;
+  border: 1px solid #f2b703;
+  color: #312e2b;
+}
+
 .img-slide {
   height: 50vh;
 }
@@ -106,6 +134,10 @@ header .navbar .logo-container img {
   .img-slide {
     height: 75vh;
   }
+}
+
+.mission-statement {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -29,8 +29,9 @@
   <!-- Mission Statement -->
   <section class="content-section">
     <div class="content-container">
-      <h1><?php echo $main_heading; ?></h1>
-      <p><?php echo $mission_statement; ?></p>
+      <h1><?php echo esc_html( $main_heading ); ?></h1>
+      <p class="mission-statement"><?php echo esc_html( $mission_statement ); ?></p>
+      <div class="btn btn-dark"><?php echo esc_html( $cta_button_label ) ?></div>
     </div>
   </section>
 
