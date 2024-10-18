@@ -2,9 +2,10 @@
 <?php get_header(); ?>
 
 <main>
+  <!-- Hero Image Carousel -->
   <?php 
   $images = get_field( 'hero_images' ); 
-  
+
   if ( $images ) {
     echo '<div class="slider">';
 
@@ -16,6 +17,10 @@
     echo '</div>';
   }
   ?>
+  <!-- Mission Statement -->
+  <section>
+    
+  </section>
 
 </main>
 

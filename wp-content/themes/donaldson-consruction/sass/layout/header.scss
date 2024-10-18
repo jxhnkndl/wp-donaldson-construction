@@ -2,6 +2,11 @@ header {
   background: $color_primary-dark;
   background: linear-gradient(90deg, $color_primary-dark 0%, $color_secondary-dark 70%, $color-secondary 100%);
   height: clamp(3.75rem, 3.419rem + 0.882vw, 4.125rem);
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
 
   .navbar {
     align-items: center;
@@ -40,7 +45,7 @@ header {
 
     .logo-container {
       padding-left: 1.25rem;
-      width: clamp(10rem, 8.897rem + 2.941vw, 11.25rem);
+      width: clamp(11rem, 8.897rem + 2.941vw, 14.25rem);
 
       img {
         object-fit: contain;

@@ -12,6 +12,11 @@ header {
   background: #f27406;
   background: linear-gradient(90deg, #f27406 0%, #f29f04 70%, #f2b703 100%);
   height: clamp(3.75rem, 3.419rem + 0.882vw, 4.125rem);
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
 }
 header .navbar {
   align-items: center;
@@ -45,7 +50,7 @@ header .navbar .menu-container .menu-icon .menu-bar-bottom {
 }
 header .navbar .logo-container {
   padding-left: 1.25rem;
-  width: clamp(10rem, 8.897rem + 2.941vw, 11.25rem);
+  width: clamp(11rem, 8.897rem + 2.941vw, 14.25rem);
 }
 header .navbar .logo-container img {
   object-fit: contain;
