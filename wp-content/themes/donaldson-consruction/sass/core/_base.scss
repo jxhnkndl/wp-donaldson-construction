@@ -16,6 +16,14 @@ h2 {
   @include section-heading;
 }
 
+p {
+  @include body-text;
+}
+
+button {
+  @include button-text;
+}
+
 .content-section {
   margin: 4.5rem 2rem 7rem 2rem;
   position: relative;
@@ -23,5 +31,5 @@ h2 {
 
 .content-container {
   margin: 0 auto;
-  width: $main-content-container;
+  max-width: $main-content-container;
 }
