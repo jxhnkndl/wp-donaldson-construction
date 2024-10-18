@@ -11,9 +11,10 @@
 
 @mixin section-heading {
   font-family: $font_primary;
-  font-size: 3rem;
+  font-size: clamp(2rem, 0.235rem + 4.706vw, 4rem);
   font-weight: 500;
-  line-height: 3.25rem;
+  line-height: clamp(2.5rem, 1.838rem + 1.765vw, 3.25rem);
+  margin-bottom: clamp(1rem, 0.118rem + 2.353vw, 2rem);
 }
 
 @mixin button-text {
