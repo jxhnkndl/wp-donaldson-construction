@@ -52,4 +52,18 @@ header .navbar .logo-container img {
   width: 100%;
 }
 
+.img-slide {
+  height: 50vh;
+}
+@media (min-width: 768px) {
+  .img-slide {
+    height: 100vh;
+  }
+}
+@media (min-width: 1024px) {
+  .img-slide {
+    height: 75vh;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,11 @@
 // Core
 @import 'core/variables.scss';
+@import 'core/media_queries';
 @import 'core/typography.scss';
 @import 'core/base.scss';
 
 // Layout
 @import 'layout/header.scss';
+
+// Components
+@import 'components/home-hero-slider.scss';

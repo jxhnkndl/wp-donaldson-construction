@@ -36,8 +36,48 @@
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_styles' );
 
 
-  // Enqueue scripts
-  function dc_enqueue_scripts() {
+  // Enqueue Slick carousel for hero carousel on home page
+  function dc_enqueue_slick_carousel() {
+    wp_enqueue_script(
+      'dc-slick-carousel-jquery',
+      'http://code.jquery.com/jquery-1.11.0.min.js',
+      array(),
+      '1.11.0',
+      true
+    );
+    
+    wp_enqueue_script(
+      'dc-slick-carousel-jquery-migrate',
+      'http://code.jquery.com/jquery-migrate-1.2.1.min.js',
+      array('dc-slick-carousel-jquery'),
+      '1.2.1',
+      true
+    );
+
+    wp_enqueue_script(
+      'dc-slick-carousel-js',
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js',
+      array(),
+      '1.9.0',
+      true
+    );
+
+    wp_enqueue_style(
+      'dc-slick-carousel-css',
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css',
+      array(),
+      '1.9.0',
+      'all'
+    );
+
+    wp_enqueue_style(
+      'dc-slick-carousel-css-theme',
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css',
+      array('dc-slick-carousel-css'),
+      '1.9.0',
+      'all'
+    );
+
     wp_enqueue_script(
       'dc-hero-slider',
       get_template_directory_uri() . '/assets/js/hero-slider.js',
@@ -47,6 +87,5 @@
     );
   }
 
-  add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );
-
+  add_action( 'wp_enqueue_scripts', 'dc_enqueue_slick_carousel' );
 ?>
