@@ -1,6 +1,15 @@
 <?php /* Template Name: Home */ ?>
 <?php get_header(); ?>
 
+<?php 
+  $main_heading = get_field( 'main_heading' );
+  $mission_statement = get_field( 'mission_statement' );
+  $cta_button_label = get_field( 'cta_button_label' );
+  $featured_projects_heading = get_field( 'featured_projects_heading' );
+  $featured_projects_button_label = get_field( 'featured_projects_button_label' );
+  $testimonials_heading = get_field( 'testimonials_heading' );
+?>
+
 <main>
   <!-- Hero Image Carousel -->
   <?php 
@@ -18,8 +27,11 @@
   }
   ?>
   <!-- Mission Statement -->
-  <section>
-    
+  <section class="content-section">
+    <div class="content-container">
+      <h1><?php echo $main_heading; ?></h1>
+      <p><?php echo $mission_statement; ?></p>
+    </div>
   </section>
 
 </main>
