@@ -16,6 +16,10 @@ h2 {
   @include section-heading;
 }
 
+h2.brand-block-heading {
+  @include brand-block-heading;
+}
+
 p {
   @include body-text;
 }

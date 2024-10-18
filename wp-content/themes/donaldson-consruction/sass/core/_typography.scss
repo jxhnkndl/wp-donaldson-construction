@@ -17,6 +17,14 @@
   margin-bottom: clamp(1rem, 0.118rem + 2.353vw, 2rem);
 }
 
+@mixin brand-block-heading {
+  font-family: $font_primary;
+  font-size: clamp(1.75rem, 0.647rem + 2.941vw, 3rem);
+  font-weight: 500;
+  line-height: clamp(2rem, 0.897rem + 2.941vw, 3.25rem);
+  margin-bottom: clamp(1rem, 0.118rem + 2.353vw, 2rem);
+}
+
 @mixin button-text {
   font-family: $font_secondary;
   font-weight: 300;

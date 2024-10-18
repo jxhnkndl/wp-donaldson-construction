@@ -1,0 +1,73 @@
+.brand-block-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  position: relative;
+
+  @include screen-md {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .blueprint-bg {
+    background-image: url('/wp-content/themes/donaldson-consruction/assets/images/blueprint-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    position: relative;
+
+    @include screen-sm {
+      min-height: 100vh;
+    }
+
+    @include screen-md {
+      min-height: 60vh;
+    }
+
+    .overlay {
+      align-items: center;
+      display: flex;
+      inset: 0;
+      justify-content: center;
+      position: absolute;
+      z-index: 0;
+
+      &-primary {
+        background-color: rgba(242, 135, 6, 0.88);
+      }
+
+      &-secondary {
+        background-color: rgba(242, 183, 3, 0.88);
+      }
+
+      h2 {
+        margin-bottom: 0;
+        padding: 0 1.5rem;
+        position: relative;
+        width: 100%;
+        z-index: 100;
+
+        @include screen-sm {
+          width: 75%;
+        }
+
+        @include screen-lg {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .brand-image {
+    min-height: 50vh;
+
+    @include screen-sm {
+      min-height: 100vh;
+    }
+
+    @include screen-md {
+      min-height: 60vh;
+    }
+  }
+}
