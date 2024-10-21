@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@500;600;700;800&display=swap");
 *,
 *::before,
@@ -32,15 +32,14 @@ h2.brand-block-heading {
 
 p {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 1.25px;
   line-height: 1.5rem;
 }
 
 button {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.5px;
+  font-weight: 400;
 }
 
 .content-section {
@@ -100,6 +99,85 @@ header .navbar .logo-container {
 header .navbar .logo-container img {
   object-fit: contain;
   width: 100%;
+}
+
+.help-block-wide {
+  display: none;
+  position: relative;
+}
+@media (min-width: 568px) {
+  .help-block-wide {
+    display: block;
+  }
+}
+.help-block-wide .bg-image {
+  height: 28rem;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .help-block-wide .bg-image {
+    height: 35rem;
+  }
+}
+.help-block-wide .bg-image .bg-blur {
+  backdrop-filter: blur(6px);
+}
+.help-block-wide .grid-overlay {
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.help-block-wide .grid-overlay .bg-charcoal {
+  align-items: center;
+  background-color: rgba(49, 46, 43, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.help-block-wide .grid-overlay .bg-charcoal .help-content {
+  min-width: 50%;
+  max-width: 375px;
+}
+@media (min-width: 768px) {
+  .help-block-wide .grid-overlay .bg-charcoal .help-content {
+    max-width: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  .help-block-wide .grid-overlay .bg-charcoal .help-content {
+    max-width: 420px;
+  }
+}
+.help-block-wide .grid-overlay .bg-charcoal .help-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.75rem);
+  font-weight: 500;
+  line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
+  color: #f2f2f2;
+  margin-bottom: 0.75rem;
+}
+.help-block-wide .grid-overlay .bg-charcoal .help-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  color: #f2f2f2;
+  margin-bottom: 2rem;
+}
+.help-block-wide .grid-overlay .bg-orange {
+  background-color: rgba(242, 116, 6, 0.75);
 }
 
 .brand-block-section {
@@ -179,17 +257,17 @@ header .navbar .logo-container img {
 
 .btn {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.5px;
+  font-weight: 400;
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
+  letter-spacing: 0;
   padding: 1rem 4rem;
+  text-decoration: none;
   transition: all 200ms ease-in-out;
 }
 .btn:hover {
   background-color: transparent;
-  color: #312e2b;
 }
 .btn-full {
   width: 100%;
@@ -203,6 +281,10 @@ header .navbar .logo-container img {
   background-color: #f2b703;
   border: 1px solid #f2b703;
   color: #312e2b;
+}
+.btn-secondary:hover {
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
 }
 
 .img-slide {
@@ -253,7 +335,7 @@ header .navbar .logo-container img {
 }
 .featured-projects-container .featured-project p {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 1.25px;
   line-height: 1.5rem;
   margin-bottom: 2rem;

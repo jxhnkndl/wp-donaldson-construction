@@ -1,0 +1,78 @@
+.help-block-wide {
+  display: none;
+  position: relative;
+
+  @include screen-sm {
+    display: block;
+  }
+
+  .bg-image {
+    height: 28rem;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    position: relative;
+
+    @include screen-md {
+      height: 35rem;
+    }
+
+    .bg-blur {
+      backdrop-filter: blur(6px);
+    }
+  }
+
+  .grid-overlay {
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    .bg-charcoal {
+      align-items: center;
+      background-color: $color_dark-opacity-overlay;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .help-content {
+        min-width: 50%;
+        max-width: 375px;
+
+        @include screen-md {
+          max-width: 350px;
+        }
+
+        @include screen-lg {
+          max-width: 420px;
+        }
+
+        h3 {
+          @include subheading;
+          
+          color: $color_white;
+          margin-bottom: 0.75rem;
+        }
+
+        p {
+          @include body-text;
+
+          color: $color_white;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .bg-orange {
+      background-color: rgba(242, 116, 6, 0.75);
+    }
+  }
+}
