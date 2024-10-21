@@ -25,6 +25,13 @@
   margin-bottom: clamp(1rem, 0.118rem + 2.353vw, 2rem);
 }
 
+@mixin subheading {
+  font-family: $font_primary;
+  font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.75rem);
+  font-weight: 500;
+  line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
+}
+
 @mixin button-text {
   font-family: $font_secondary;
   font-weight: 300;
