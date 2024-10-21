@@ -4,12 +4,13 @@
   border-radius: 80px;
   cursor: pointer;
   display: inline-block;
+  letter-spacing: 0;
   padding: 1rem 4rem;
+  text-decoration: none;
   transition: all 200ms ease-in-out;
 
   &:hover {
     background-color: transparent;
-    color: $color_black;
   }
 
 
@@ -27,5 +28,10 @@
     background-color: $color_secondary;
     border: 1px solid $color_secondary;
     color: $color_black;
+
+    &:hover {
+      border: 1px solid $color_white;
+      color: $color_white;
+    }
   }
 }
