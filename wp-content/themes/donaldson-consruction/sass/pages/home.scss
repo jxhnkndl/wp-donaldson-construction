@@ -15,3 +15,41 @@
 .mission-statement {
   margin-bottom: 2rem;
 }
+
+// Featured projects
+.featured-projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+
+  @include screen-sm {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .featured-project {
+    .thumbnail-image-container {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      
+      img {
+        border-radius: $border-radius;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    
+    h3 {
+      @include subheading;
+
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      @include body-text;
+
+      margin-bottom: 2rem;
+    }
+  }
+}
