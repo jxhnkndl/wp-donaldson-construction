@@ -47,6 +47,10 @@
         min-width: 50%;
         max-width: 375px;
 
+        @include screen-sm {
+          max-width: 250px;
+        }
+
         @include screen-md {
           max-width: 350px;
         }
@@ -73,6 +77,52 @@
 
     .bg-orange {
       background-color: rgba(242, 116, 6, 0.75);
+    }
+  }
+}
+
+.help-block-tall {
+  position: relative;
+
+  @include screen-sm {
+    display: none;
+  }
+
+  .bg-image-tall {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &-overlay {
+      background-color: rgba(77, 77, 77, 0.9);
+    }
+
+    &-blur {
+      backdrop-filter: blur(3px);
+    }
+
+    &-content {
+      padding: 5rem 2rem;
+
+      h3 {
+        @include subheading;
+        
+        color: $color_white;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        @include body-text;
+
+        color: $color_white;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        text-align: center;
+        width: 100%;
+      }
     }
   }
 }

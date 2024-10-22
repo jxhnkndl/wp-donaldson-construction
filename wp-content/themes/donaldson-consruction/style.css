@@ -237,6 +237,11 @@ header .navbar .logo-container img {
   min-width: 50%;
   max-width: 375px;
 }
+@media (min-width: 568px) {
+  .help-block-wide .grid-overlay .bg-charcoal .help-content {
+    max-width: 250px;
+  }
+}
 @media (min-width: 768px) {
   .help-block-wide .grid-overlay .bg-charcoal .help-content {
     max-width: 350px;
@@ -265,6 +270,50 @@ header .navbar .logo-container img {
 }
 .help-block-wide .grid-overlay .bg-orange {
   background-color: rgba(242, 116, 6, 0.75);
+}
+
+.help-block-tall {
+  position: relative;
+}
+@media (min-width: 568px) {
+  .help-block-tall {
+    display: none;
+  }
+}
+.help-block-tall .bg-image-tall {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.help-block-tall .bg-image-tall-overlay {
+  background-color: rgba(77, 77, 77, 0.9);
+}
+.help-block-tall .bg-image-tall-blur {
+  backdrop-filter: blur(3px);
+}
+.help-block-tall .bg-image-tall-content {
+  padding: 5rem 2rem;
+}
+.help-block-tall .bg-image-tall-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.75rem);
+  font-weight: 500;
+  line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
+  color: #f2f2f2;
+  margin-bottom: 0.75rem;
+}
+.help-block-tall .bg-image-tall-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  color: #f2f2f2;
+  margin-bottom: 2rem;
+}
+.help-block-tall .bg-image-tall-content a {
+  text-align: center;
+  width: 100%;
 }
 
 .brand-block-section {
