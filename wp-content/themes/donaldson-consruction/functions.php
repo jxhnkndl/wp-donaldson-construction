@@ -14,6 +14,19 @@
   add_action( 'init', 'dc_remove_default_fields' );
 
 
+  // Register menus
+  function dc_register_menus() {
+    $menu_locations = array(
+      'primary'     => 'Primary Top Navbar Menu',
+      'footer'      => 'Footer Menu Items'
+    );
+
+    register_nav_menus( $menu_locations );
+  }
+
+  add_action( 'init', 'dc_register_menus' );
+
+
   // Install theme support
   function dc_install_theme_support() {
     add_theme_support( 'title-tag' );
@@ -21,7 +34,7 @@
 
   add_action( 'after_setup_theme', 'dc_install_theme_support' );
 
-  
+
   // Enqueue styles
   function dc_enqueue_styles() {
     wp_enqueue_style(
