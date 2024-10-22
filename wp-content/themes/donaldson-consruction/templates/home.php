@@ -16,7 +16,7 @@
   $featured_projects_heading = get_field( 'featured_projects_heading' );
   $featured_projects_button_label = get_field( 'featured_projects_button_label' );
   
-  $args = array(
+  $featured_project_args = array(
     'post_type'         => 'project',
     'posts_per_page'    => 2,
     'metaquery'         => array(
@@ -25,7 +25,7 @@
     )
   );
 
-  $featured_projects_query = new WP_Query( $args );
+  $featured_projects_query = new WP_Query( $featured_project_args );
 
   // Brand block bottom
   $brand_block_bottom = get_field( 'brand_block_bottom' );
@@ -34,6 +34,12 @@
   
   // Testimonials section
   $testimonials_heading = get_field( 'testimonials_heading' );
+
+  $testimonials_args = array(
+    'post_type'         => 'testimonial',
+  );
+
+  $testimonials_query = new WP_Query( $testimonials_args );
 
 ?>
 
@@ -76,7 +82,7 @@
     </section>
 
     <!-- Featured Projects -->
-    <div class="content-section">
+    <section class="content-section">
       <div class="content-container">
         <h2><?php echo esc_html( $featured_projects_heading ); ?></h2>
         <div class="featured-projects-container">
@@ -88,11 +94,11 @@
                 $project_description = get_field( 'short_project_description' );
 
                 echo '<div class="featured-project">';
-                  echo '<div class="thumbnail-image-container">';
-                    echo '<img src="' . $thumbnail_img[ 'url' ] . '" alt="Donaldson Construction project" />';
-                  echo '</div>';
-                  echo '<h3 class="project-title">' . $project_title . '</h3>';
-                  echo '<p>' . $project_description . '</p>';
+                echo '<div class="thumbnail-image-container">';
+                echo '<img src="' . $thumbnail_img[ 'url' ] . '" alt="Donaldson Construction project" />';
+                echo '</div>';
+                echo '<h3 class="project-title">' . $project_title . '</h3>';
+                echo '<p>' . $project_description . '</p>';
                 echo '</div>';
               endwhile;
             endif;
@@ -100,7 +106,7 @@
         </div>
         <div class="btn btn-dark"><?php echo esc_html( $featured_projects_button_label ) ?></div>
       </div>
-    </div>
+    </section>
 
     <!-- Brand Block -->
     <section class="brand-block-section">
@@ -109,6 +115,46 @@
         <div class="overlay overlay-secondary">
           <h2 class="brand-block-heading"><?php echo esc_html( $brand_block_bottom_heading ) ?></h2>
         </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Block -->
+    <section class="content-section">
+      <div class="content-container">
+        <h2><?php echo $testimonials_heading; ?></h2>
+        <div class="testimonials-slider">
+          <?php 
+            if ( $testimonials_query->have_posts() ) :
+              while ( $testimonials_query->have_posts() ) : $testimonials_query->the_post();
+                $name = get_field( 'name' );
+                $job_title = get_field( 'job_title' );
+                $company = get_field( 'company' );
+                $testimonial_body = get_field( 'testimonial_body' );
+                $testimonial_excerpt = get_field( 'testimonial_excerpt' );
+
+                echo '<div class="testimonial-slide">';
+                echo '<div class="testimonial-content">';
+
+                echo '<div class="quote-icon-container">';
+                echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-quote.png' . '" />';
+                echo '</div>';
+
+                echo '<div class="testimonial-header">';
+                echo '<p class="testimonial-author">' . $name . '</p>';
+                echo '<p class="testimonial-company">' . $job_title . ', ' . $company . '</p>';
+                echo '</div>';
+
+                echo '<div class="testimonial-divider"></div>';
+
+                echo '<p class="testimonial-body testimonial-body-full">' . $testimonial_body . '</p>';
+                echo '<p class="testimonial-body testimonial-body-mobile">' . $testimonial_excerpt . '</p>';
+
+                echo '</div>';
+                echo '</div>';
+              endwhile;
+            endif;
+          ?>
+        </div>      
       </div>
     </section>
 

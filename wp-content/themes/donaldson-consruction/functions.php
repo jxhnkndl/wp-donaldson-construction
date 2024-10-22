@@ -85,6 +85,14 @@
       $version,
       true
     );
+
+    wp_enqueue_script(
+      'dc-testimonials-slider',
+      get_template_directory_uri() . '/assets/js/testimonials-slider.js',
+      array(),
+      $version,
+      true
+    );
   }
 
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_slick_carousel' );
