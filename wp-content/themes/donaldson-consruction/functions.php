@@ -38,6 +38,14 @@
   // Enqueue styles
   function dc_enqueue_styles() {
     wp_enqueue_style(
+      'dc-font-awesome',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css',
+      array(),
+      '6.6.0',
+      'all'
+    );
+
+    wp_enqueue_style(
       'dc-custom-styles',
       get_template_directory_uri() . "/style.css",
       array(),
