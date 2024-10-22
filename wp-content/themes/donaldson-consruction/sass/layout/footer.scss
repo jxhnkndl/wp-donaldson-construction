@@ -9,29 +9,68 @@ footer {
     @include footer-text;
     
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
 
+    @include screen-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include screen-lg {
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     .footer-cell {
+      text-align: center;
+
+      @include screen-sm {
+        text-align: left;
+      }
+
       h4 {
         color: $color_secondary;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         text-transform: uppercase;
       }
 
-      .footer-nav-links {
+      .footer-nav-items {
         display: flex;
         flex-direction: column;
         gap: 0.35rem;
         list-style: none;
+        text-transform: uppercase;
 
         a {
           color: $color_white;
           text-decoration: none;
-          text-transform: uppercase;
           transition: all 100ms ease-in;
+
+          &:hover {
+            color: $color_secondary;
+          }
+        }
+
+        .contact-icon {
+          margin-right: 0.25rem;
+        }
+      }
+
+      .social-icons {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 2rem;
+
+        @include screen-sm {
+          justify-content: flex-start;
+        }
+
+        a {
+          color: $color_white;
 
           &:hover {
             color: $color_secondary;
