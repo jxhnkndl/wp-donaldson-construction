@@ -51,3 +51,5 @@
       </div>
     </nav>
   </header>
+
+  <div class="opacity-overlay"></div>

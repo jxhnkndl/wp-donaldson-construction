@@ -90,6 +90,15 @@ nav {
       li {
         margin-top: 0.5rem;
         padding: 1rem 0 1rem 2.3rem;
+        transition: all 100ms ease-out;
+
+        &:hover {
+          background-color: $color_charcoal;
+
+          a {
+            color: $color_secondary-dark;
+          }
+        }
 
         a {
           @include nav-menu-text;
@@ -128,4 +137,15 @@ nav {
       }
     }
   }
+}
+
+.opacity-overlay {
+  background-color: $color_dark-opacity-overlay;
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 50;
 }
