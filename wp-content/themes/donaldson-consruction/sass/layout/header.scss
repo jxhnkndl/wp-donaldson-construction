@@ -1,17 +1,19 @@
 header {
-  background: $color_primary-dark;
-  background: linear-gradient(90deg, $color_primary-dark 0%, $color_secondary-dark 70%, $color-secondary 100%);
   height: clamp(3.75rem, 3.419rem + 0.882vw, 4.125rem);
   left: 0;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 500;
 
   .navbar {
     align-items: center;
+    background: $color_primary-dark;
+    background: linear-gradient(90deg, $color_primary-dark 0%, $color_secondary-dark 70%, $color-secondary 100%);
     display: flex;
     height: 100%;
+    position: relative;
+    z-index: 200;
 
     .menu-container {
       align-items: center;
@@ -50,6 +52,79 @@ header {
       img {
         object-fit: contain;
         width: 100%;
+      }
+    }
+  }
+}
+
+nav {
+  background-color: $color_black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  min-height: 100vh;
+  overflow: auto;
+  padding-top: 1.5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+  @include screen-sm {
+    width: 20rem;
+  }
+
+  @include screen-lg {
+    width: 25rem;
+  }
+
+  .nav-links-container {
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 6.25rem;
+
+      li {
+        margin-top: 0.5rem;
+        padding: 1rem 0 1rem 2.3rem;
+
+        a {
+          @include nav-menu-text;
+        }
+      }
+    }
+  }
+
+  .nav-info-container {
+    @include body-text;
+
+    color: $color_white;
+    padding: 0 2.3rem 2.25rem 2.3rem;
+
+    p {
+      margin-bottom: 2.25rem;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .nav-icons-container {
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+      font-size: 3rem;
+
+      a {
+        color: $color_white;
+        transition: all 100ms ease-in;
+
+        &:hover {
+          color: $color_secondary;
+        }
       }
     }
   }

@@ -14,10 +14,10 @@
           <?php
             wp_nav_menu(
               array(
-                'menu' => 'Footer Menu',
-                'container' => '',
-                'theme_location' => 'Footer Menu Items',
-                'items_wrap' => '<ul class="footer-nav-items">%3$s</ul>'
+                'menu'            => 'Footer Menu',
+                'container'       => '',
+                'theme_location'  => 'Footer Menu Items',
+                'items_wrap'      => '<ul>%3$s</ul>'
               )
             );
           ?>

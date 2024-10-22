@@ -7,6 +7,7 @@
 </head>
 <body>
   <header>
+    <!-- Navbar -->
     <div class="navbar">
       <div class="menu-container">
         <div class="menu-icon">
@@ -20,4 +21,33 @@
         </a>
       </div>
     </div>
+
+    <!-- Nav drawer -->
+    <nav>
+      <div class="nav-links-container">
+        <?php 
+          wp_nav_menu(
+            array(
+              'menu'            => 'Main Top Nav',
+              'container'       => '',
+              'theme_location'  => 'Primary Top Navbar Menu',
+              'items_wrap'      => '<ul class="nav-links-list">%3$s</ul>'
+            )
+          );
+        ?>
+      </div>
+      <div class="nav-info-container">
+        <p>
+          <span>Donaldson Construction</span> is a commercial construction company servicing Central Virginia.
+        </p>
+        <div class="nav-icons-container">
+          <a href="<?php echo esc_url( $facebook_url ); ?>">
+            <i class="social-icon fa-brands fa-facebook"></i>
+          </a>
+          <a href="<?php echo esc_url( $instagram_url ); ?>">
+            <i class="social-icon fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
   </header>

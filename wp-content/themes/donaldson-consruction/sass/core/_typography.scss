@@ -44,6 +44,15 @@
   font-weight: 400;
 }
 
+@mixin nav-menu-text {
+  color: $color_white;
+  font-family: $font_primary;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  text-decoration: none;
+}
+
 @mixin footer-text {
   color: $color_white;
   font-family: $font_primary;
