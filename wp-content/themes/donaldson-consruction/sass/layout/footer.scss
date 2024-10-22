@@ -54,7 +54,12 @@ footer {
         }
 
         .contact-icon {
+          display: none;
           margin-right: 0.25rem;
+
+          @include screen-sm {
+            display: inline-block;
+          }
         }
       }
 
