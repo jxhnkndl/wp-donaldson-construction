@@ -60,6 +60,14 @@
   // Enqueue Slick carousel for hero carousel on home page
   function dc_enqueue_slick_carousel() {
     wp_enqueue_script(
+      'dc-gsap-animation',
+      'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
+      array(),
+      '3.12.5',
+      true
+    );
+
+    wp_enqueue_script(
       'dc-slick-carousel-jquery',
       'http://code.jquery.com/jquery-1.11.0.min.js',
       array(),
@@ -97,6 +105,14 @@
       array('dc-slick-carousel-css'),
       '1.9.0',
       'all'
+    );
+
+    wp_enqueue_script(
+      'dc-main-nav',
+      get_template_directory_uri() . '/assets/js/main-nav.js',
+      array(),
+      $version,
+      true
     );
 
     wp_enqueue_script(

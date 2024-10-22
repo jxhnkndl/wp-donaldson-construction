@@ -9,21 +9,21 @@
   <header>
     <!-- Navbar -->
     <div class="navbar">
-      <div class="menu-container">
+      <div class="menu-container" aria-expanded="false">
         <div class="menu-icon">
           <div class="menu-bar menu-bar-top"></div>
           <div class="menu-bar menu-bar-bottom"></div>
         </div>
       </div>
       <div class="logo-container">
-        <a href="<?php echo get_home_url(); ?>">
+        <a href="<?php echo get_home_url(); ?>" aria-label="Visit home page">
           <img src="<?php echo get_template_directory_uri() . '/assets/images/dc-brandmark.png'; ?>" />
         </a>
       </div>
     </div>
 
     <!-- Nav drawer -->
-    <nav>
+    <nav class="nav-drawer nav-hide">
       <div class="nav-links-container">
         <?php 
           wp_nav_menu(
