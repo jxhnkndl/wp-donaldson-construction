@@ -32,6 +32,13 @@
   line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
 }
 
+@mixin testimonial-heading {
+  font-family: $font-secondary;
+  font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.5rem);
+  font-weight: 600;
+  line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
+}
+
 @mixin button-text {
   font-family: $font_secondary;
   font-weight: 400;
