@@ -64,4 +64,31 @@
       }
     }
   }
+  
+  .slick-dots {
+    bottom: -50px;
+    display: flex;
+    gap: clamp(0.031rem, 0.004rem + 0.074vw, 0.063rem);
+    justify-content: center;
+    list-style: none;
+    position: absolute;
+
+    li {
+      background-color: $color_dark-opacity-overlay;
+      border-radius: $border-radius;
+      height: 10px;
+      transition: all 300ms ease-in-out;
+      width: clamp(1.25rem, 0.423rem + 2.206vw, 2.188rem);
+
+      &.slick-active {
+        background-color: $color_black;
+        width: 60px;
+      }
+
+      button::before {
+        content: "";
+      }
+
+    }
+  }
 }
