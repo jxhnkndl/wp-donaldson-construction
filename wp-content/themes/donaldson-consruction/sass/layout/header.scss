@@ -95,12 +95,21 @@ header {
 
         &:hover {
           background-color: $color_charcoal;
-
+          
           a {
             color: $color_secondary-dark;
+            position: relative;
+
+            &::before {
+              content: '\f054';
+              color: $color_secondary-dark;
+              font: var(--fa-font-solid);
+              font-size: 1.75rem;
+              margin-right: 0.5rem;
+            }
           }
         }
-
+        
         a {
           @include nav-menu-text;
         }

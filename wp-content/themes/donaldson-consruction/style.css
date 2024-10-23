@@ -232,6 +232,14 @@ header .navbar .logo-container img {
 }
 .nav-drawer .nav-links-container ul li:hover a {
   color: #f29f04;
+  position: relative;
+}
+.nav-drawer .nav-links-container ul li:hover a::before {
+  content: "\f054";
+  color: #f29f04;
+  font: var(--fa-font-solid);
+  font-size: 1.75rem;
+  margin-right: 0.5rem;
 }
 .nav-drawer .nav-links-container ul li a {
   color: #f2f2f2;

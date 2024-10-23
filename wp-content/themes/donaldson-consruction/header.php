@@ -31,7 +31,7 @@
               'menu'            => 'Main Top Nav',
               'container'       => '',
               'theme_location'  => 'Primary Top Navbar Menu',
-              'items_wrap'      => '<ul class="nav-links-list">%3$s</ul>'
+              'items_wrap'      => '<ul class="nav-links-list">%3$s</ul>',
             )
           );
         ?>
