@@ -12,7 +12,7 @@
   $company_overview_button_label = get_field( 'company_overview_button_label' );
 
   // Brand block
-  $brand_block = get_field( 'brand_block_group ');
+  $brand_block = get_field( 'brand_block_group');
   $brand_heading = $brand_block[ 'brand_statement' ];
   $brand_image = $brand_block[ 'brand_image' ];
 
@@ -28,7 +28,7 @@
 
 
 <main>
-  <?php echo 'hi'; ?>
+  <?php echo $brand_block; ?>
   <!-- Hero section -->
   <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: top center; background-repeat: no-repeat;"></div>
 
@@ -47,6 +47,16 @@
       <div class="btn btn-dark"><?php echo esc_html( $company_overview_button_label ) ?></div>
     </div>
   </div>
+
+  <!-- Brand Block -->
+  <section class="brand-block-section">
+    <div class="brand-image" style="background-image: url(<?php echo esc_url( $brand_image[ 'url' ] ) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="blueprint-bg">
+      <div class="overlay overlay-secondary">
+        <h2 class="brand-block-heading home-brand-block-heading-secondary"><?php echo esc_html( $brand_heading ) ?></h2>
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>
