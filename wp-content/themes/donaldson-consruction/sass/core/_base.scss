@@ -38,3 +38,15 @@ button {
   max-width: $main-content-container;
   position: relative;
 }
+
+.subpage-hero-image {
+  min-height: 50vh;
+
+  @include screen-sm {
+    min-height: 100vh;
+  }
+
+  @include screen-md {
+    min-height: 75vh;
+  }
+}
