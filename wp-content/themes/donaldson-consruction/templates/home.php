@@ -63,7 +63,7 @@
     ?>
 
     <!-- Mission Statement -->
-    <section class="content-section">
+    <section class="content-section mission-statement-section">
       <div class="content-container">
         <h1><?php echo esc_html( $main_heading ); ?></h1>
         <p class="mission-statement"><?php echo esc_html( $mission_statement ); ?></p>
@@ -75,14 +75,14 @@
     <section class="brand-block-section">
       <div class="blueprint-bg">
         <div class="overlay overlay-primary">
-          <h2 class="brand-block-heading"><?php echo esc_html( $brand_block_top_heading ) ?></h2>
+          <h2 class="brand-block-heading home-brand-block-heading-primary"><?php echo esc_html( $brand_block_top_heading ) ?></h2>
         </div>
       </div>
       <div class="brand-image" style="background-image: url(<?php echo esc_url( $brand_block_top_image ) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
     </section>
 
     <!-- Featured Projects -->
-    <section class="content-section">
+    <section class="content-section featured-projects-section">
       <div class="content-container">
         <h2><?php echo esc_html( $featured_projects_heading ); ?></h2>
         <div class="featured-projects-container">
@@ -113,13 +113,13 @@
       <div class="brand-image" style="background-image: url(<?php echo esc_url( $brand_block_bottom_image ) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
       <div class="blueprint-bg">
         <div class="overlay overlay-secondary">
-          <h2 class="brand-block-heading"><?php echo esc_html( $brand_block_bottom_heading ) ?></h2>
+          <h2 class="brand-block-heading home-brand-block-heading-secondary"><?php echo esc_html( $brand_block_bottom_heading ) ?></h2>
         </div>
       </div>
     </section>
 
     <!-- Testimonials Block -->
-    <section class="content-section">
+    <section class="content-section testimonials-section">
       <div class="content-container">
         <h2><?php echo $testimonials_heading; ?></h2>
         <div class="testimonials-slider">

@@ -68,6 +68,14 @@
     );
 
     wp_enqueue_script(
+      'dc-gsap-animation-scrolltrigger',
+      'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',
+      array(),
+      '3.12.5',
+      true
+    );
+
+    wp_enqueue_script(
       'dc-slick-carousel-jquery',
       'http://code.jquery.com/jquery-1.11.0.min.js',
       array(),
@@ -110,6 +118,22 @@
     wp_enqueue_script(
       'dc-main-nav',
       get_template_directory_uri() . '/assets/js/main-nav.js',
+      array(),
+      $version,
+      true
+    );
+
+    wp_enqueue_script(
+      'dc-home-scroll-animations',
+      get_template_directory_uri() . '/assets/js/home-scroll-animations.js',
+      array(),
+      $version,
+      true
+    );
+
+    wp_enqueue_script(
+      'dc-help-block-scroll-animations',
+      get_template_directory_uri() . '/assets/js/help-block-scroll-animations.js',
       array(),
       $version,
       true
