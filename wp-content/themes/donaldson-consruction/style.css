@@ -562,6 +562,11 @@ header .navbar .logo-container img {
   justify-content: center;
   padding: 2rem;
 }
+.testimonials-slider.slick-slider .testimonial-slide-dark {
+  background-color: transparent;
+  color: #f2f2f2;
+  padding: 0.5rem 2rem 2rem 2rem;
+}
 @media (min-width: 768px) {
   .testimonials-slider.slick-slider .testimonial-slide {
     height: 34rem;
@@ -592,6 +597,15 @@ header .navbar .logo-container img {
   letter-spacing: 1.25px;
   line-height: 1.5rem;
   font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+.testimonials-slider.slick-slider .testimonial-slide .testimonial-header .testimonial-divider {
+  background-color: #f28706;
+  height: 2px;
+  width: 4rem;
+}
+.testimonials-slider.slick-slider .testimonial-slide .testimonial-header .testimonial-divider-secondary {
+  background-color: #f2b703;
 }
 .testimonials-slider.slick-slider .testimonial-slide .testimonial-body {
   font-style: italic;
@@ -668,6 +682,28 @@ header .navbar .logo-container img {
   border-radius: 0.75rem;
   object-fit: cover;
   width: 100%;
+}
+
+.testimonials-section-dark {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.testimonials-section-dark .testimonials-dark-overlay {
+  background-color: rgba(49, 46, 43, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 5rem;
+  position: relative;
+  z-index: 50;
+}
+.testimonials-section-dark .content-section-flush {
+  margin: 0;
+}
+.testimonials-section-dark .content-section-flush .testimonials-heading-light {
+  color: #f2f2f2;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .img-slide {

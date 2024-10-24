@@ -146,8 +146,8 @@
 
                 echo '<div class="testimonial-divider"></div>';
 
-                echo '<p class="testimonial-body testimonial-body-full">' . $testimonial_body . '</p>';
-                echo '<p class="testimonial-body testimonial-body-mobile">' . $testimonial_excerpt . '</p>';
+                echo '<p class="testimonial-body testimonial-body-full">"' . $testimonial_body . '"</p>';
+                echo '<p class="testimonial-body testimonial-body-mobile">"' . $testimonial_excerpt . '"</p>';
 
                 echo '</div>';
                 echo '</div>';

@@ -57,6 +57,50 @@
       </div>
     </div>
   </section>
+
+  <!-- Testimonials Block -->
+  <section class="testimonials-section testimonials-section-dark" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/contact-hero.jpg'; ?>);">
+    <div class="testimonials-dark-overlay">
+      <div class="content-section-flush">
+        <div class="content-container">
+          <h2 class="testimonials-heading-light"><?php echo $testimonials_heading; ?></h2>
+          <div class="testimonials-slider">
+            <?php 
+              if ( $testimonials_query->have_posts() ) :
+                while ( $testimonials_query->have_posts() ) : $testimonials_query->the_post();
+                  $name = get_field( 'name' );
+                  $job_title = get_field( 'job_title' );
+                  $company = get_field( 'company' );
+                  $testimonial_body = get_field( 'testimonial_body' );
+                  $testimonial_excerpt = get_field( 'testimonial_excerpt' );
+
+                  echo '<div class="testimonial-slide testimonial-slide-dark">';
+                  echo '<div class="testimonial-content">';
+
+                  echo '<div class="quote-icon-container">';
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-quote-secondary.png' . '" />';
+                  echo '</div>';
+
+                  echo '<div class="testimonial-header">';
+                  echo '<p class="testimonial-author">' . $name . '</p>';
+                  echo '<p class="testimonial-company">' . $job_title . ', ' . $company . '</p>';
+                  echo '<div class="testimonial-divider testimonial-divider-secondary"></div>';
+                  echo '</div>';
+
+
+                  echo '<p class="testimonial-body testimonial-body-full">"' . $testimonial_body . '"</p>';
+                  echo '<p class="testimonial-body testimonial-body-mobile">"' . $testimonial_excerpt . '"</p>';
+
+                  echo '</div>';
+                  echo '</div>';
+                endwhile;
+              endif;
+            ?>
+          </div>      
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>
