@@ -392,6 +392,9 @@ header .navbar .logo-container img {
   border: 1px solid #312e2b;
   color: #f2f2f2;
 }
+.btn-dark:hover {
+  color: #312e2b;
+}
 .btn-secondary {
   background-color: #f2b703;
   border: 1px solid #f2b703;

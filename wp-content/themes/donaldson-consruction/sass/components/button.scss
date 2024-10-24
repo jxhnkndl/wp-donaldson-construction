@@ -22,6 +22,10 @@
     background-color: $color_black;
     border: 1px solid $color_black;
     color: $color_white;
+
+    &:hover {
+      color: $color_black;
+    }
   }
 
   &-secondary {
