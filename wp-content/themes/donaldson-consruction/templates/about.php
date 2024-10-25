@@ -33,7 +33,7 @@
   <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: top center; background-repeat: no-repeat;"></div>
 
   <!-- Company overview -->
-  <div class="content-section company-overview-section">
+  <section class="content-section company-overview-section">
     <div class="content-container">
       <h1><?php echo esc_html( $company_overview_heading ); ?></h1>
       <div class="company-overview-grid">
@@ -46,7 +46,7 @@
       </div>
       <div class="btn btn-dark"><?php echo esc_html( $company_overview_button_label ) ?></div>
     </div>
-  </div>
+  </section>
 
   <!-- Brand Block -->
   <section class="brand-block-section">
@@ -59,48 +59,47 @@
   </section>
 
   <!-- Testimonials Block -->
-  <section class="testimonials-section testimonials-section-dark" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/contact-hero.jpg'; ?>);">
-    <div class="testimonials-dark-overlay">
-      <div class="content-section-flush">
-        <div class="content-container">
-          <h2 class="testimonials-heading-light"><?php echo $testimonials_heading; ?></h2>
-          <div class="testimonials-slider">
-            <?php 
-              if ( $testimonials_query->have_posts() ) :
-                while ( $testimonials_query->have_posts() ) : $testimonials_query->the_post();
-                  $name = get_field( 'name' );
-                  $job_title = get_field( 'job_title' );
-                  $company = get_field( 'company' );
-                  $testimonial_body = get_field( 'testimonial_body' );
-                  $testimonial_excerpt = get_field( 'testimonial_excerpt' );
+  <section class="content-section testimonials-section">
+    <div class="content-container">
+      <h2 class="testimonials-heading-light"><?php echo $testimonials_heading; ?></h2>
+      <div class="testimonials-slider">
+        <?php 
+          if ( $testimonials_query->have_posts() ) :
+            while ( $testimonials_query->have_posts() ) : $testimonials_query->the_post();
+              $name = get_field( 'name' );
+              $job_title = get_field( 'job_title' );
+              $company = get_field( 'company' );
+              $testimonial_body = get_field( 'testimonial_body' );
+              $testimonial_excerpt = get_field( 'testimonial_excerpt' );
 
-                  echo '<div class="testimonial-slide testimonial-slide-dark">';
-                  echo '<div class="testimonial-content">';
+              echo '<div class="testimonial-slide">';
+              echo '<div class="testimonial-content">';
 
-                  echo '<div class="quote-icon-container">';
-                  echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-quote-secondary.png' . '" />';
-                  echo '</div>';
+              echo '<div class="quote-icon-container">';
+              echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-quote.png' . '" />';
+              echo '</div>';
 
-                  echo '<div class="testimonial-header">';
-                  echo '<p class="testimonial-author">' . $name . '</p>';
-                  echo '<p class="testimonial-company">' . $job_title . ', ' . $company . '</p>';
-                  echo '<div class="testimonial-divider testimonial-divider-secondary"></div>';
-                  echo '</div>';
+              echo '<div class="testimonial-header">';
+              echo '<p class="testimonial-author">' . $name . '</p>';
+              echo '<p class="testimonial-company">' . $job_title . ', ' . $company . '</p>';
+              echo '</div>';
 
+              echo '<div class="testimonial-divider"></div>';
 
-                  echo '<p class="testimonial-body testimonial-body-full">"' . $testimonial_body . '"</p>';
-                  echo '<p class="testimonial-body testimonial-body-mobile">"' . $testimonial_excerpt . '"</p>';
+              echo '<p class="testimonial-body testimonial-body-full">"' . $testimonial_body . '"</p>';
+              echo '<p class="testimonial-body testimonial-body-mobile">"' . $testimonial_excerpt . '"</p>';
 
-                  echo '</div>';
-                  echo '</div>';
-                endwhile;
-              endif;
-            ?>
-          </div>      
-        </div>
-      </div>
+              echo '</div>';
+              echo '</div>';
+            endwhile;
+          endif;
+        ?>
+      </div>      
     </div>
   </section>
+
+  <!-- Help Block -->
+  <?php get_template_part( 'template-parts/help-block' ) ?>
 </main>
 
 <?php get_footer(); ?>
