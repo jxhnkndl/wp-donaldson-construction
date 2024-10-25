@@ -32,28 +32,3 @@
     }
   }
 }
-
-.testimonials-section-dark {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-  .testimonials-dark-overlay {
-    background-color: $color_dark-opacity-overlay;
-    backdrop-filter: blur(10px);
-    padding: 5rem;
-    position: relative;
-    z-index: 50;
-  }
-
-  .content-section-flush {
-    margin: 0;
-
-    .testimonials-heading-light {
-      color: $color_white;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-  }
-}
