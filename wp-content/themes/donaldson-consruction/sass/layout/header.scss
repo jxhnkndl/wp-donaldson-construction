@@ -97,15 +97,16 @@ header {
           background-color: $color_charcoal;
           
           a {
+            align-items: center;
             color: $color_secondary-dark;
-            position: relative;
+            display: flex;
 
-            &::before {
-              content: '\f054';
+            &::after {
+              content: '\f061';
               color: $color_secondary-dark;
               font: var(--fa-font-solid);
-              font-size: 1.75rem;
-              margin-right: 0.5rem;
+              font-size: 1.5rem;
+              margin-left: 1rem;
             }
           }
         }

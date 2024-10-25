@@ -245,15 +245,16 @@ header .navbar .logo-container img {
   background-color: #4d4d4d;
 }
 .nav-drawer .nav-links-container ul li:hover a {
+  align-items: center;
   color: #f29f04;
-  position: relative;
+  display: flex;
 }
-.nav-drawer .nav-links-container ul li:hover a::before {
-  content: "\f054";
+.nav-drawer .nav-links-container ul li:hover a::after {
+  content: "\f061";
   color: #f29f04;
   font: var(--fa-font-solid);
-  font-size: 1.75rem;
-  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
 }
 .nav-drawer .nav-links-container ul li a {
   color: #f2f2f2;
