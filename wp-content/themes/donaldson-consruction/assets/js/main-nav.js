@@ -1,3 +1,4 @@
+const bodyEl = document.querySelector('body');
 const menuEl = document.querySelector('.menu-container');
 const menuBarTopEl = document.querySelector('.menu-bar-top');
 const menuBarBottomEl = document.querySelector('.menu-bar-bottom');
@@ -16,6 +17,10 @@ menuEl.addEventListener('click', () => {
   } else {
     openNav();
   }
+});
+
+overlayEl.addEventListener('click', () => {
+  closeNav();
 });
 
 const openNav = () => {
