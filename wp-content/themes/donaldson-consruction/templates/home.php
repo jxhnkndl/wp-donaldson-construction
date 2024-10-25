@@ -67,7 +67,9 @@
       <div class="content-container">
         <h1><?php echo esc_html( $main_heading ); ?></h1>
         <p class="mission-statement"><?php echo esc_html( $mission_statement ); ?></p>
-        <div class="btn btn-dark"><?php echo esc_html( $cta_button_label ) ?></div>
+        <div class="btn btn-dark">
+          <a href=""><?php echo esc_html( $cta_button_label ) ?></a>
+        </div>
       </div>
     </section>
     
@@ -104,7 +106,9 @@
             endif;
           ?>
         </div>
-        <div class="btn btn-dark"><?php echo esc_html( $featured_projects_button_label ) ?></div>
+        <div class="btn btn-dark">
+          <a href=""><?php echo esc_html( $featured_projects_button_label ) ?></a>
+        </div>
       </div>
     </section>
 

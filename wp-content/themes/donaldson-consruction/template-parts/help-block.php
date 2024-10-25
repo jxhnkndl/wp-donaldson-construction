@@ -16,7 +16,9 @@
       <div class="help-content">
         <h3><?php echo $heading; ?></h3>
         <p><?php echo $body; ?></p>
-        <a href="#" class="btn btn-secondary"><?php echo $button_text; ?></a>
+        <div class="btn btn-secondary">
+          <a href=""><?php echo esc_html( $button_text ); ?></a>
+        </div>
       </div>
     </div>
     <div class="bg-orange"></div>
@@ -30,7 +32,9 @@
       <div class="bg-image-tall-content">
         <h3><?php echo esc_html( $heading ); ?></h3>
         <p><?php echo esc_html( $body ); ?></p>
-        <a href="#" class="btn btn-secondary"><?php echo $button_text; ?></a>
+        <div class="btn btn-secondary">
+          <a href=""><?php echo esc_html( $button_text ); ?></a>
+        </div>
       </div>
     </div>
   </div>
