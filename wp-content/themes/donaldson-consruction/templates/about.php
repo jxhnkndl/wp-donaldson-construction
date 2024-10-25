@@ -20,7 +20,7 @@
   $testimonials_heading = get_field( 'testimonials_heading' );
   
   $testimonials_args = array(
-    'post_type'         => 'testimonial',
+    'post_type' => 'testimonial',
   );
 
   $testimonials_query = new WP_Query( $testimonials_args );
@@ -28,7 +28,6 @@
 
 
 <main>
-  <?php echo $brand_block; ?>
   <!-- Hero section -->
   <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: top center; background-repeat: no-repeat;"></div>
 
