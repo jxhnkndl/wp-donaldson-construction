@@ -18,7 +18,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-size: clamp(2rem, 0.235rem + 4.706vw, 4rem);
   font-weight: 500;
-  line-height: clamp(2.5rem, 1.838rem + 1.765vw, 3.25rem);
+  line-height: clamp(2.5rem, 0.735rem + 4.706vw, 4.5rem);
   margin-bottom: clamp(1rem, -0.765rem + 4.706vw, 3rem);
 }
 
@@ -778,6 +778,43 @@ header .navbar .logo-container img {
   letter-spacing: 1.25px;
   line-height: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.project-gallery-grid {
+  display: grid;
+  gap: clamp(2rem, 1.118rem + 2.353vw, 3rem);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 568px) {
+  .project-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.project-gallery-grid .project-card {
+  color: #312e2b;
+  text-decoration: none;
+}
+.project-gallery-grid .project-card .project-image {
+  margin-bottom: 1rem;
+}
+.project-gallery-grid .project-card .project-image img {
+  border-radius: 0.75rem;
+  object-fit: cover;
+  width: 100%;
+}
+.project-gallery-grid .project-card h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.75rem);
+  font-weight: 500;
+  line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
+  margin-bottom: 0.5rem;
+}
+.project-gallery-grid .project-card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

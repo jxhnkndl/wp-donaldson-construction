@@ -1,0 +1,35 @@
+.project-gallery-grid {
+  display: grid;
+  gap: clamp(2rem, 1.118rem + 2.353vw, 3rem);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  @include screen-sm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card {
+    color: $color_black;
+    text-decoration: none;
+
+    .project-image {
+      margin-bottom: 1rem;
+      
+      img {
+        border-radius: $border-radius;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      @include subheading;
+
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      @include body-text;
+    }
+  }
+}
