@@ -424,6 +424,10 @@ header .navbar .logo-container img {
 .btn-dark {
   background-color: #312e2b;
   border: 1px solid #312e2b;
+  color: #f2f2f2;
+}
+.btn-dark:hover {
+  color: #312e2b;
 }
 .btn-dark:hover a {
   color: #312e2b;
@@ -743,6 +747,98 @@ header .navbar .logo-container img {
   border-radius: 0.75rem;
   object-fit: cover;
   width: 100%;
+}
+
+.contact-section .content-container h1 {
+  margin-bottom: 1rem;
+}
+.contact-section .content-container p {
+  margin-bottom: 3.75rem;
+}
+.contact-section .contact-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 568px) {
+  .contact-section .contact-grid {
+    gap: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .contact-section .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .contact-section .contact-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.contact-section .contact-grid form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-section .contact-grid form .form-control label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  margin-bottom: 0.5rem;
+}
+.contact-section .contact-grid form .form-control input,
+.contact-section .contact-grid form .form-control textarea {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.75rem;
+  outline-color: #f28706;
+  padding: 0.75rem;
+  width: 100%;
+}
+.contact-section .contact-grid form .form-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.contact-section .contact-grid form .form-grid-top {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .contact-section .contact-grid form .form-grid-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.contact-section .contact-grid form .form-grid-bottom {
+  grid-template-columns: 1fr 1fr;
+}
+.contact-section .contact-grid form .submit-btn {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .contact-section .contact-grid form .submit-btn {
+    width: 40%;
+  }
+}
+.contact-section .contact-grid form .submit-btn::after {
+  content: "\f061";
+  color: #f2f2f2;
+  display: inline-block;
+  font: var(--fa-font-solid);
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+.contact-section .contact-grid form .submit-btn:hover::after {
+  color: #312e2b;
 }
 
 .img-slide {

@@ -20,6 +20,11 @@
   &-dark {
     background-color: $color_black;
     border: 1px solid $color_black;
+    color: $color-white;
+
+    &:hover {
+      color: $color_black;
+    }
     
     &:hover a {
       color: $color_black;

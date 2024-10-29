@@ -1,0 +1,99 @@
+.contact-section {
+  .content-container {
+    h1 {
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  .contact-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    @include screen-sm {
+      gap: 3rem;
+    }
+
+    @include screen-md {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include screen-lg {
+      grid-template-columns: 2fr 1fr;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form-control {
+        label {
+          @include body-text;
+
+          display: block;
+          font-weight: 500;
+          letter-spacing: 0.25px;
+          margin-bottom: 0.5rem;
+        }
+
+        input,
+        textarea {
+          @include body-text;
+
+          background-color: transparent;
+          border: 1px solid rgba(0,0,0,0.25);
+          border-radius: $border-radius;
+          outline-color: $color-primary;
+          padding: 0.75rem;
+          width: 100%;
+        }
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+        &-top {
+          width: 100%;
+
+          @include screen-lg {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        &-bottom {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .submit-btn {
+        width: 100%;
+        
+        @include screen-lg {
+          width: 40%;
+        }
+
+        &::after {
+          content: '\f061';
+          color: $color_white;
+          display: inline-block;
+          font: var(--fa-font-solid);
+          font-size: 0.75rem;
+          margin-left: 0.5rem;
+        }
+  
+        &:hover::after {
+          color: $color_black;
+        }
+      }
+    }
+  }
+}
