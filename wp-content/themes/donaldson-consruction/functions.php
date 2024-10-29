@@ -162,6 +162,14 @@
       $version,
       true
     );
+
+    wp_enqueue_script(
+      'dc-contact-form-validation',
+      get_template_directory_uri() . '/assets/js/contact-form-validation.js',
+      array(),
+      $version,
+      true
+    );
   }
 
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );

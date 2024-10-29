@@ -49,8 +49,19 @@
           background-color: transparent;
           border: 1px solid rgba(0,0,0,0.25);
           border-radius: $border-radius;
-          outline-color: $color-primary;
+          margin-bottom: 0.25rem;
+          outline-color: $color_primary;
           padding: 0.75rem;
+          width: 100%;
+        }
+
+        .error-message {
+          @include body-text;
+
+          color: $color_primary-dark;
+          height: 0.75rem;
+          font-weight: 400;
+          letter-spacing: 0.25px;
           width: 100%;
         }
       }
@@ -79,6 +90,25 @@
         
         @include screen-lg {
           width: 40%;
+        }
+
+        &:disabled {
+          background-color: $color_dark-opacity-overlay;
+          opacity: 0.5;
+          
+          &:hover {
+            background-color: $color_dark-opacity-overlay;
+            color: $color-white;
+
+            &::after {
+              content: '\f061';
+              color: $color_white;
+              display: inline-block;
+              font: var(--fa-font-solid);
+              font-size: 0.75rem;
+              margin-left: 0.5rem;
+            }
+          }
         }
 
         &::after {

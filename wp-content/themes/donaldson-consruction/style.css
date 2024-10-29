@@ -800,8 +800,20 @@ header .navbar .logo-container img {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 0.75rem;
+  margin-bottom: 0.25rem;
   outline-color: #f28706;
   padding: 0.75rem;
+  width: 100%;
+}
+.contact-section .contact-grid form .form-control .error-message {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  color: #f27406;
+  height: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.25px;
   width: 100%;
 }
 .contact-section .contact-grid form .form-grid {
@@ -828,6 +840,22 @@ header .navbar .logo-container img {
   .contact-section .contact-grid form .submit-btn {
     width: 40%;
   }
+}
+.contact-section .contact-grid form .submit-btn:disabled {
+  background-color: rgba(49, 46, 43, 0.75);
+  opacity: 0.5;
+}
+.contact-section .contact-grid form .submit-btn:disabled:hover {
+  background-color: rgba(49, 46, 43, 0.75);
+  color: #f2f2f2;
+}
+.contact-section .contact-grid form .submit-btn:disabled:hover::after {
+  content: "\f061";
+  color: #f2f2f2;
+  display: inline-block;
+  font: var(--fa-font-solid);
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
 }
 .contact-section .contact-grid form .submit-btn::after {
   content: "\f061";
