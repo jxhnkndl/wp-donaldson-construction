@@ -42,7 +42,8 @@
               $project_title = get_field( 'project_title' );
               $project_description = get_field( 'short_project_description');
 
-              echo '<a href="" class="project-card">';
+              // Dynamically inject project's permalink to ensure project card links correctly
+              echo '<a href="' . get_permalink() . '" class="project-card">';
               echo '<div>';
               
               echo '<div class="project-image">';
