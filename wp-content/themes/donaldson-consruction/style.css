@@ -11,6 +11,7 @@
 body {
   background-color: #f2ece5;
   color: #312e2b;
+  position: relative;
 }
 
 h1,
@@ -908,6 +909,58 @@ header .navbar .logo-container img {
 .back-link i {
   display: inline-block;
   margin-right: 0.5rem;
+}
+
+.lightbox-container {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 500;
+}
+.lightbox-container .lightbox-overlay {
+  align-items: center;
+  background-color: rgba(49, 46, 43, 0.75);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+}
+.lightbox-container .lightbox-content {
+  align-items: center;
+  background-color: transparent;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.lightbox-container .lightbox-content .lightbox-image-container {
+  aspect-ratio: 16/9;
+  width: 75vw;
+  position: relative;
+}
+.lightbox-container .lightbox-content .lightbox-image-container img {
+  border-radius: 0.75rem;
+  object-fit: contain;
+  transition: all 250 ease-out;
+  width: 100%;
+}
+.lightbox-container .lightbox-content .lightbox-image-container .x-icon {
+  color: #312e2b;
+  position: absolute;
+  top: 1.75rem;
+  right: 1.75rem;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

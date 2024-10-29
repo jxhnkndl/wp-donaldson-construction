@@ -31,7 +31,7 @@
   <!-- Image gallery -->
   <section class="content-section image-gallery">
     <div class="content-container">
-      <div class="project-details-grid">
+      <div class="project-details-grid" aria-expanded="false">
         <?php
           if ( have_rows( 'image_gallery' ) ) :
             while ( have_rows( 'image_gallery' ) ) : the_row();
@@ -39,13 +39,9 @@
               $image_url = $image[ 'url' ];
               $image_alt_text = $image[ 'alt' ];
 
-              echo '<a href="" class="gallery-image-link">';
               echo '<div class="gallery-image-container">';
-              
-              echo '<img src="' . $image_url . '" alt="' . $image_alt_text . '" class="gallery_image" />';
-              
+              echo '<img src="' . $image_url . '" alt="' . $image_alt_text . '" class="gallery-image" />';
               echo '</div>';
-              echo '</a>';
             endwhile;
           endif;
         ?>
@@ -56,6 +52,11 @@
       </a>
     </div>
   </section>
+  
+  <div class="lightbox-container">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content"></div>
+  </div>
 </main>
 
 <?php get_footer(); ?>

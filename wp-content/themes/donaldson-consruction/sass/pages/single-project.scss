@@ -78,3 +78,61 @@
     margin-right: 0.5rem;
   }
 }
+
+.lightbox-container {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 500;
+
+  .lightbox-overlay {
+    align-items: center;
+    background-color: $color_dark-opacity-overlay;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 500;
+  }
+  
+  .lightbox-content {
+    align-items: center;
+    background-color: transparent;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+  
+    
+    .lightbox-image-container {
+      aspect-ratio: 16 / 9;
+      width: 75vw;
+      position: relative;
+            
+      img {
+        border-radius: $border_radius;
+        object-fit: contain;
+        transition: all 250 ease-out;
+        width: 100%;
+      }
+
+      .x-icon {
+        color: $color_black;
+        position: absolute;
+        top: 1.75rem;
+        right: 1.75rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
