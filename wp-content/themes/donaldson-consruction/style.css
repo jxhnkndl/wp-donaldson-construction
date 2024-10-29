@@ -67,6 +67,24 @@ button {
   }
 }
 
+.project-details-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 568px) {
+  .project-details-grid {
+    gap: 1.25rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.project-details-grid .gallery-image-container img {
+  border-radius: 0.75rem;
+  object-fit: cover;
+  width: 100%;
+}
+
 footer {
   background-color: #312e2b;
   padding-bottom: clamp(5rem, 3.235rem + 4.706vw, 7rem);
@@ -815,6 +833,81 @@ header .navbar .logo-container img {
   font-weight: 200;
   letter-spacing: 1.25px;
   line-height: 1.5rem;
+}
+
+.project-details-section {
+  margin-bottom: 1rem;
+}
+.project-details-section h1 {
+  margin-bottom: 0.5rem;
+}
+.project-details-section .location-container {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.project-details-section .location-container i {
+  color: #f28706;
+  margin-right: 0.5rem;
+}
+.project-details-section .location-container p {
+  display: inline-block;
+  font-weight: 400;
+}
+.project-details-section .project-divider {
+  background-color: #312e2b;
+  height: 2px;
+  margin: 1rem 0;
+  opacity: 0.1;
+  width: 100%;
+}
+
+.project-details-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin-bottom: 3rem;
+}
+@media (min-width: 568px) {
+  .project-details-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+.project-details-grid .gallery-image-container {
+  transition: all 150ms ease-in-out;
+}
+.project-details-grid .gallery-image-container:hover {
+  transform: scale(1.015);
+}
+.project-details-grid .gallery-image-container:active {
+  transform: scale(0.99);
+}
+
+.back-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  line-height: 1.5rem;
+  color: #312e2b;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.back-link:hover {
+  color: #f27406;
+  transition: all 100ms ease-in;
+}
+.back-link i {
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
