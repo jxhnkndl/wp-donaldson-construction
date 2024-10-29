@@ -157,7 +157,7 @@
 
     wp_enqueue_script(
       'dc-project-lightbox',
-      get_template_directory_uri() . '/assets/js/project-lightbox.js',
+      get_template_directory_uri() . '/assets/js/image-gallery-lightbox.js',
       array(),
       $version,
       true
