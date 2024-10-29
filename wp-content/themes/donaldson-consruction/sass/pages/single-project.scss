@@ -49,11 +49,11 @@
     transition: all 150ms ease-in-out;
 
     &:hover {
-      transform: scale(1.015);
+      transform: scale($image-hover);
     }
 
     &:active {
-      transform: scale(0.99);
+      transform: scale($image-press);
     }
 
     .gallery-image {

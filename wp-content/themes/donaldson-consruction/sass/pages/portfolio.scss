@@ -14,9 +14,19 @@
 
     .project-image {
       margin-bottom: 1rem;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        transform: scale($image-hover);
+      }
+
+      &:active {
+        transform: scale($image-press);
+      }
       
       img {
         border-radius: $border-radius;
+        cursor: pointer;
         object-fit: cover;
         width: 100%;
       }

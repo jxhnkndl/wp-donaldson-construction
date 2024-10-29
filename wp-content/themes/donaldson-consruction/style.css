@@ -776,8 +776,16 @@ header .navbar .logo-container img {
   }
 }
 .featured-projects-container .featured-project .thumbnail-image-container {
+  cursor: pointer;
   margin-bottom: 1.5rem;
+  transition: all 150ms ease-in-out;
   width: 100%;
+}
+.featured-projects-container .featured-project .thumbnail-image-container:hover {
+  transform: scale(1.01);
+}
+.featured-projects-container .featured-project .thumbnail-image-container:active {
+  transform: scale(0.99);
 }
 .featured-projects-container .featured-project .thumbnail-image-container img {
   border-radius: 0.75rem;
@@ -816,9 +824,17 @@ header .navbar .logo-container img {
 }
 .project-gallery-grid .project-card .project-image {
   margin-bottom: 1rem;
+  transition: all 150ms ease-in-out;
+}
+.project-gallery-grid .project-card .project-image:hover {
+  transform: scale(1.01);
+}
+.project-gallery-grid .project-card .project-image:active {
+  transform: scale(0.99);
 }
 .project-gallery-grid .project-card .project-image img {
   border-radius: 0.75rem;
+  cursor: pointer;
   object-fit: cover;
   width: 100%;
 }
@@ -884,7 +900,7 @@ header .navbar .logo-container img {
   transition: all 150ms ease-in-out;
 }
 .project-details-grid .gallery-image-container:hover {
-  transform: scale(1.015);
+  transform: scale(1.01);
 }
 .project-details-grid .gallery-image-container:active {
   transform: scale(0.99);

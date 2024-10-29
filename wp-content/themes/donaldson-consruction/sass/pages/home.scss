@@ -30,8 +30,18 @@
 
   .featured-project {
     .thumbnail-image-container {
+      cursor: pointer;
       margin-bottom: 1.5rem;
+      transition: all 150ms ease-in-out;
       width: 100%;
+
+      &:hover {
+        transform: scale($image-hover);
+      }
+
+      &:active {
+        transform: scale($image-press);
+      }
       
       img {
         border-radius: $border-radius;
