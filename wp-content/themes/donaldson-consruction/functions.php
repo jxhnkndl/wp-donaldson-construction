@@ -58,7 +58,7 @@
 
 
   // Enqueue Slick carousel for hero carousel on home page
-  function dc_enqueue_slick_carousel() {
+  function dc_enqueue_scripts() {
     wp_enqueue_script(
       'dc-gsap-animation',
       'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
@@ -154,7 +154,15 @@
       $version,
       true
     );
+
+    wp_enqueue_script(
+      'dc-project-lightbox',
+      get_template_directory_uri() . '/assets/js/project-lightbox.js',
+      array(),
+      $version,
+      true
+    );
   }
 
-  add_action( 'wp_enqueue_scripts', 'dc_enqueue_slick_carousel' );
+  add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );
 ?>
