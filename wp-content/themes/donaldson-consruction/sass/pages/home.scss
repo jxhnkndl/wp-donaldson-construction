@@ -50,10 +50,21 @@
       }
     }
     
-    h3 {
-      @include subheading;
+    a {
+      color: $color_black;
+      text-decoration: none;
 
-      margin-bottom: 0.5rem;
+      h3 {
+        @include subheading;
+  
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        transition: all 150ms ease-in-out;
+  
+        &:hover {
+          color: $color_primary-dark;
+        }
+      }
     }
 
     p {

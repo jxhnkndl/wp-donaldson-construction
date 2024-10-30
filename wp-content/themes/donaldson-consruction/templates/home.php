@@ -94,13 +94,22 @@
                 $thumbnail_img = get_field( 'thumbnail_image' );
                 $project_title = get_field( 'project_title' );
                 $project_description = get_field( 'short_project_description' );
+                $project_link = get_permalink();
 
                 echo '<div class="featured-project">';
+
+                echo '<a href="' . $project_link . '" class="featured-project">';
                 echo '<div class="thumbnail-image-container">';
                 echo '<img src="' . $thumbnail_img[ 'url' ] . '" alt="Donaldson Construction project" />';
                 echo '</div>';
+                echo '</a>';
+
+                echo '<a href="' . $project_link . '" class="featured-project">';
                 echo '<h3 class="project-title">' . $project_title . '</h3>';
+                echo '</a>';
+                
                 echo '<p>' . $project_description . '</p>';
+
                 echo '</div>';
               endwhile;
             endif;
