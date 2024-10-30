@@ -1,0 +1,61 @@
+.careers-overview-section {
+  .content-container {
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 4rem;
+    }
+
+    .careers {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      
+      .career-posting {
+        background-color: $color_primary-pale;
+        border: 1px solid $color_primary_pale;
+        border-radius: $border-radius;
+        color: $color_black;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $color_primary-light;
+          border-color: $color_black;
+        }
+    
+        .inner-career-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.15rem;
+    
+          h2 {
+            @include subheading;
+    
+            color: $color_primary-dark;
+            margin-bottom: 0.25rem;
+          }
+    
+          .career-location {
+            margin-bottom: 1rem;
+
+            &-icon {
+              color: $color_primary;
+              margin: 0 0.5rem 1rem 0;
+            }
+          }
+
+          .career-description {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

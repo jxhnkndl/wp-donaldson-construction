@@ -719,6 +719,57 @@ header .navbar .logo-container img {
   width: 100%;
 }
 
+.careers-overview-section .content-container h1 {
+  margin-bottom: 1rem;
+}
+.careers-overview-section .content-container p {
+  margin-bottom: 4rem;
+}
+.careers-overview-section .content-container .careers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.careers-overview-section .content-container .careers .career-posting {
+  background-color: #f2ece5;
+  border: 1px solid #f2ece5;
+  border-radius: 0.75rem;
+  color: #312e2b;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-decoration: none;
+}
+.careers-overview-section .content-container .careers .career-posting:hover {
+  background-color: #f1e4d3;
+  border-color: #312e2b;
+}
+.careers-overview-section .content-container .careers .career-posting .inner-career-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.careers-overview-section .content-container .careers .career-posting .inner-career-container h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.25rem, 0.893rem + 0.952vw, 1.75rem);
+  font-weight: 500;
+  line-height: clamp(1.75rem, 0.876rem + 1.718vw, 2.25rem);
+  color: #f27406;
+  margin-bottom: 0.25rem;
+}
+.careers-overview-section .content-container .careers .career-posting .inner-career-container .career-location {
+  margin-bottom: 1rem;
+}
+.careers-overview-section .content-container .careers .career-posting .inner-career-container .career-location-icon {
+  color: #f28706;
+  margin: 0 0.5rem 1rem 0;
+}
+.careers-overview-section .content-container .careers .career-posting .inner-career-container .career-description {
+  margin-bottom: 0;
+}
+
 .contact-section .content-container h1 {
   margin-bottom: 1rem;
 }
