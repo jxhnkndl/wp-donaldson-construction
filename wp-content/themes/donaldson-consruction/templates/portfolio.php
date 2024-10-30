@@ -21,7 +21,7 @@
 
 <main>
   <!-- Hero section -->
-  <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: top center; background-repeat: no-repeat;"></div>
+  <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
 
   <!-- Portfolio overview -->
   <section class="content-section portfolio-section">

@@ -17,14 +17,14 @@
 
 <main>
   <!-- Hero section -->
-  <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: top center; background-repeat: no-repeat;"></div>
+  <div class="subpage-hero-image" style="background-image: url(<?php echo esc_url( $hero_image[ 'url' ] ); ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
 
   <div class="content-section contact-section">
     <div class="content-container">
       <h1><?php echo esc_html( $contact_heading ); ?></h1>
       <p><?php echo wp_strip_all_tags( $contact_description ); ?></p>
       <div class="contact-grid">
-        <form action="<?php ?>" method="POST" id="contact-form">
+        <form action="<?php echo get_home_url(); ?>" method="POST" id="contact-form">
           <input type="hidden" name="action" value="submit_wp_contact_form" />
           <div class="form-control">
             <label for="name">Full Name</label>
@@ -65,7 +65,7 @@
             <textarea class="form-input" name="message" id="input-message"></textarea>
             <div class="error-message" id="error-message-message"></div>
           </div>
-          <button id="submitBtn" type="submit" class="btn btn-dark submit-btn">Submit</button>
+          <button id="submitBtn" type="submit" class="btn btn-dark submit-btn" disabled>Submit</button>
         </form>
         <div class="contact-sidebar">
           SIDEBAR
