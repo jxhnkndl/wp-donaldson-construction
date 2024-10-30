@@ -425,67 +425,38 @@ header .navbar .logo-container img {
   border: 1px solid #312e2b;
   color: #f2f2f2;
 }
+.btn-dark::after {
+  content: "\f061";
+  color: #f2f2f2;
+  font: var(--fa-font-solid);
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
 .btn-dark:hover {
   color: #312e2b;
 }
-.btn-dark:hover a {
-  color: #312e2b;
-}
-.btn-dark:hover a::after {
-  content: "\f061";
-  color: #312e2b;
-  font: var(--fa-font-solid);
-  font-size: 0.75rem;
-  margin-left: 0.5rem;
-}
-.btn-dark a {
-  align-items: center;
-  color: #f2f2f2;
-  display: flex;
-  text-decoration: none;
-}
-.btn-dark a::after {
-  content: "\f061";
-  color: #f2f2f2;
-  display: inline-block;
-  font: var(--fa-font-solid);
-  font-size: 0.75rem;
-  margin-left: 0.5rem;
-}
-.btn-dark a:hover::after {
+.btn-dark:hover::after {
   color: #312e2b;
 }
 .btn-secondary {
   background-color: #f2b703;
   border: 1px solid #f2b703;
+  color: #312e2b;
+}
+.btn-secondary::after {
+  content: "\f061";
+  color: #312e2b;
+  display: inline-block;
+  font: var(--fa-font-solid);
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
 }
 .btn-secondary:hover {
   border: 1px solid #f2f2f2;
-}
-.btn-secondary:hover a {
   color: #f2f2f2;
 }
-.btn-secondary:hover a::after {
-  content: "\f061";
+.btn-secondary:hover::after {
   color: #f2f2f2;
-  display: inline-block;
-  font: var(--fa-font-solid);
-  font-size: 0.75rem;
-  margin-left: 0.5rem;
-}
-.btn-secondary a {
-  align-items: center;
-  color: #312e2b;
-  display: flex;
-  text-decoration: none;
-}
-.btn-secondary a::after {
-  content: "\f061";
-  color: #312e2b;
-  display: inline-block;
-  font: var(--fa-font-solid);
-  font-size: 0.75rem;
-  margin-left: 0.5rem;
 }
 
 .help-block-wide {

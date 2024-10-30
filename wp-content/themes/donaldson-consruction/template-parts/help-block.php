@@ -16,9 +16,7 @@
       <div class="help-content">
         <h3><?php echo $heading; ?></h3>
         <p><?php echo $body; ?></p>
-        <div class="btn btn-secondary">
-          <a href=""><?php echo esc_html( $button_text ); ?></a>
-        </div>
+        <a class="btn btn-secondary" href=""><?php echo esc_html( $button_text ); ?></a>
       </div>
     </div>
     <div class="bg-orange"></div>

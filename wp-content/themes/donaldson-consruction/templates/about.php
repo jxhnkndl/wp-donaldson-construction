@@ -43,9 +43,9 @@
           <img src="<?php echo esc_url( $company_overiew_image[ 'url' ] ); ?>" alt="<?php echo esc_attr( $company_overiew_image[ 'alt' ] ); ?>" />
         </div>
       </div>
-      <div class="btn btn-dark">
-        <a href=""><?php echo esc_html( $company_overview_button_label ) ?></a>
-      </div>
+      <a class="btn btn-dark" href="<?php echo site_url( '/careers' ); ?>">
+        <?php echo esc_html( $company_overview_button_label ) ?>
+      </a>
     </div>
   </section>
 
