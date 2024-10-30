@@ -37,7 +37,7 @@
       <h1><?php echo esc_html( $company_overview_heading ); ?></h1>
       <div class="company-overview-grid">
         <div class="company-overview-body">
-          <p><?php echo $company_overview; ?></p>
+          <p><?php echo esc_html( $company_overview ); ?></p>
         </div>
         <div class="company-overview-image">
           <img src="<?php echo esc_url( $company_overiew_image[ 'url' ] ); ?>" alt="<?php echo esc_attr( $company_overiew_image[ 'alt' ] ); ?>" />
