@@ -125,15 +125,7 @@
       $version,
       true
     );
-
-    wp_enqueue_script(
-      'dc-home-scroll-animations',
-      get_template_directory_uri() . '/assets/js/home-scroll-animations.js',
-      array(),
-      $version,
-      true
-    );
-
+    
     wp_enqueue_script(
       'dc-help-block-scroll-animations',
       get_template_directory_uri() . '/assets/js/help-block-scroll-animations.js',
@@ -142,37 +134,53 @@
       true
     );
 
-    wp_enqueue_script(
-      'dc-hero-slider',
-      get_template_directory_uri() . '/assets/js/hero-slider.js',
-      array(),
-      $version,
-      true
-    );
+    if ( is_page( 'home' ) ) {
+      wp_enqueue_script(
+        'dc-home-scroll-animations',
+        get_template_directory_uri() . '/assets/js/home-scroll-animations.js',
+        array(),
+        $version,
+        true
+      );
 
-    wp_enqueue_script(
-      'dc-testimonials-slider',
-      get_template_directory_uri() . '/assets/js/testimonials-slider.js',
-      array(),
-      $version,
-      true
-    );
+      wp_enqueue_script(
+        'dc-hero-slider',
+        get_template_directory_uri() . '/assets/js/hero-slider.js',
+        array(),
+        $version,
+        true
+      );
+    }
 
-    wp_enqueue_script(
-      'dc-project-lightbox',
-      get_template_directory_uri() . '/assets/js/image-gallery-lightbox.js',
-      array(),
-      $version,
-      true
-    );
+    if ( is_page( array( 'home', 'about' ) ) ) {
+      wp_enqueue_script(
+        'dc-testimonials-slider',
+        get_template_directory_uri() . '/assets/js/testimonials-slider.js',
+        array(),
+        $version,
+        true
+      );
+    }
 
-    wp_enqueue_script(
-      'dc-contact-form-validation',
-      get_template_directory_uri() . '/assets/js/contact-form-validation.js',
-      array(),
-      $version,
-      true
-    );
+    if ( is_single( 'project' ) ) {
+      wp_enqueue_script(
+        'dc-project-lightbox',
+        get_template_directory_uri() . '/assets/js/image-gallery-lightbox.js',
+        array(),
+        $version,
+        true
+      );
+    }
+
+    if ( is_page( 'contact' ) ) {
+      wp_enqueue_script(
+        'dc-contact-form-validation',
+        get_template_directory_uri() . '/assets/js/contact-form-validation.js',
+        array(),
+        $version,
+        true
+      );
+    }
   }
 
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );
