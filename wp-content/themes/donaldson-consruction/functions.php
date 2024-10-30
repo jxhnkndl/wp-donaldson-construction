@@ -1,6 +1,17 @@
 <?php
   $version = wp_get_theme()->get( 'Version' );
 
+  // Install theme support
+  function dc_install_theme_support() {
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails', array( 'page', 'post' ));
+    add_theme_support( 'html5', array( 'script', 'style' ));
+    add_theme_support( 'custom-background', array( 'default-color' => 'f2ece5') );
+  }
+
+  add_action( 'after_setup_theme', 'dc_install_theme_support' );
+
+
   // Remove default Wordpress fields to make room for advanced custom fields
   function dc_remove_default_fields() {
     remove_post_type_support( 'career', 'editor' );
@@ -25,14 +36,6 @@
   }
 
   add_action( 'init', 'dc_register_menus' );
-
-
-  // Install theme support
-  function dc_install_theme_support() {
-    add_theme_support( 'title-tag' );
-  }
-
-  add_action( 'after_setup_theme', 'dc_install_theme_support' );
 
 
   // Enqueue styles
@@ -173,4 +176,33 @@
   }
 
   add_action( 'wp_enqueue_scripts', 'dc_enqueue_scripts' );
+
+
+  function submit_contact_form_data() {
+    if ( isset( $POST[ 'action' ] ) && $_POST[ 'action' ] == 'submit_contact_form_data' ) {
+      $name = sanitize_text_field( $_POST[ 'name' ] );
+      $email = sanitize_email( $_POST[ 'email' ] );
+      $address = sanitize_text_field( $_POST[ 'address '] );
+      $city = sanitize_text_field( $_POST[ 'city' ] );
+      $state = sanitize_text_field( $_POST[ 'state' ] );
+      $zip = sanitize_text_field( $_POST[ 'zip' ] );
+      $message = sanitize_textarea_field( $_POST[ 'message' ] );
+
+      $to = 'jkroyston@gmail.com';
+      $subject = 'New contact form submission!';
+      $message = 'Test';
+
+      wp_mail( $to, $subject, $message );
+    }
+
+    function generate_email_body( $name, $email, $address, $city, $state, $zip, $message ) {
+      echo 'Name: ' . $name;
+      echo 'Email: ' . $email;
+      echo 'Address: ' . $address . ', ' . $city . ' ' . $state . ', ' . $zip;
+      echo 'Message: ' . $message;
+    }
+  } 
+
+  add_action( 'admin_post_nopriv_submit_wp_contact_form', 'submit_contact_form_data' );
+  add_action( 'admin_post_submit_wp_contact_form', 'submit_contact_form_data' );
 ?>
