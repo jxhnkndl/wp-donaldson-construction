@@ -34,35 +34,47 @@
   <!-- Company overview -->
   <section class="content-section company-overview-section">
     <div class="content-container">
-      <h1><?php echo esc_html( $company_overview_heading ); ?></h1>
+      <?php if ( $company_overview_heading ) : ?>
+        <h1><?php echo esc_html( $company_overview_heading ); ?></h1>
+      <?php endif; ?>
       <div class="company-overview-grid">
-        <div class="company-overview-body">
-          <p><?php echo esc_html( $company_overview ); ?></p>
-        </div>
-        <div class="company-overview-image">
-          <img src="<?php echo esc_url( $company_overiew_image[ 'url' ] ); ?>" alt="<?php echo esc_attr( $company_overiew_image[ 'alt' ] ); ?>" />
-        </div>
+        <?php if ( $company_overview ) :?>
+          <div class="company-overview-body">
+            <p><?php echo esc_html( $company_overview ); ?></p>
+          </div>
+        <?php endif; ?>
+        <?php if ( $company_overiew_image ) : ?>
+          <div class="company-overview-image">
+            <img src="<?php echo esc_url( $company_overiew_image[ 'url' ] ); ?>" alt="<?php echo esc_attr( $company_overiew_image[ 'alt' ] ); ?>" />
+          </div>
+        <?php endif; ?>
       </div>
-      <a class="btn btn-dark" href="<?php echo site_url( '/careers' ); ?>">
-        <?php echo esc_html( $company_overview_button_label ) ?>
-      </a>
+      <?php if ( $company_overview_button_label ) : ?>
+        <a class="btn btn-dark" href="<?php echo site_url( '/careers' ); ?>">
+          <?php echo esc_html( $company_overview_button_label ) ?>
+        </a>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- Brand Block -->
-  <section class="brand-block-section">
-    <div class="brand-image" style="background-image: url(<?php echo esc_url( $brand_image[ 'url' ] ) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-    <div class="blueprint-bg">
-      <div class="overlay overlay-secondary">
-        <h2 class="brand-block-heading home-brand-block-heading-secondary"><?php echo esc_html( $brand_heading ) ?></h2>
+  <?php if ( $brand_block ) : ?>
+    <section class="brand-block-section">
+      <div class="brand-image" style="background-image: url(<?php echo esc_url( $brand_image[ 'url' ] ) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+      <div class="blueprint-bg">
+        <div class="overlay overlay-secondary">
+          <h2 class="brand-block-heading home-brand-block-heading-secondary"><?php echo esc_html( $brand_heading ) ?></h2>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <?php endif; ?>
 
   <!-- Testimonials Block -->
   <section class="content-section testimonials-section">
     <div class="content-container">
-      <h2 class="testimonials-heading-light"><?php echo $testimonials_heading; ?></h2>
+      <?php if ( $testimonials_heading ) : ?>
+        <h2 class="testimonials-heading-light"><?php echo $testimonials_heading; ?></h2>
+      <?php endif; ?>
       <div class="testimonials-slider">
         <?php 
           if ( $testimonials_query->have_posts() ) :

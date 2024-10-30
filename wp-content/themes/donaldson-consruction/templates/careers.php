@@ -20,27 +20,32 @@
   <!-- Careers overview -->
   <section class="content-section careers-overview-section">
     <div class="content-container">
-      <h1><?php echo esc_html( $careers_heading ); ?></h1>
-      <p><?php echo wp_strip_all_tags( $careers_description ); ?></p>
+      <?php if ( $careers_heading ) : ?>
+        <h1><?php echo esc_html( $careers_heading ); ?></h1>
+      <?php endif; ?>
+      <?php if ( $careers_description ) : ?>
+        <p><?php echo wp_strip_all_tags( $careers_description ); ?></p>
+      <?php endif; ?>
       <div class="careers">
-      <?php
-        if ( $careers_query->have_posts() ) :
-          while ( $careers_query->have_posts() ) : $careers_query->the_post();
-            $job_title = get_field( 'job_title' );
-            $job_location = get_field( 'job_location' );
-            $short_description = get_field( 'short_description' );
-            $posting_link = get_permalink();
+        <?php
+          if ( $careers_query->have_posts() ) :
+            while ( $careers_query->have_posts() ) : $careers_query->the_post();
+              $job_title = get_field( 'job_title' );
+              $job_location = get_field( 'job_location' );
+              $short_description = get_field( 'short_description' );
+              $posting_link = get_permalink();
 
-            echo '<a href="' . esc_url( $posting_link ) . '" class="career-posting">';
-            echo '<div class="inner-career-container">';
-            echo '<h2>' . esc_html( $job_title ) . '</h2>';
-            echo '<p class="career-location"><i class="fa-solid fa-location-dot career-location-icon"></i>' . esc_html( $job_location ) . '</p>';
-            echo '<p class="career-description">' . wp_strip_all_tags( $short_description ) . '</p>';
-            echo '</div>';
-            echo '</a>';
-          endwhile;
-        endif;
-      ?>
+              echo '<a href="' . esc_url( $posting_link ) . '" class="career-posting">';
+              echo '<div class="inner-career-container">';
+              echo '<h2>' . esc_html( $job_title ) . '</h2>';
+              echo '<p class="career-location"><i class="fa-solid fa-location-dot career-location-icon"></i>' . esc_html( $job_location ) . '</p>';
+              echo '<p class="career-description">' . wp_strip_all_tags( $short_description ) . '</p>';
+              echo '</div>';
+              echo '</a>';
+            endwhile;
+          endif;
+        ?>
+      </div>
     </div>
   </section>
 

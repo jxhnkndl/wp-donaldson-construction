@@ -21,8 +21,12 @@
 
   <div class="content-section contact-section">
     <div class="content-container">
-      <h1><?php echo esc_html( $contact_heading ); ?></h1>
-      <p><?php echo wp_strip_all_tags( $contact_description ); ?></p>
+      <?php if ( $contact_heading ) : ?>
+        <h1><?php echo esc_html( $contact_heading ); ?></h1>
+      <?php endif; ?>
+      <?php if ( $contact_description ) : ?>
+        <p><?php echo wp_strip_all_tags( $contact_description ); ?></p>
+      <?php endif; ?>
       <div class="contact-grid">
         <form action="<?php echo get_home_url(); ?>" method="POST" id="contact-form">
           <input type="hidden" name="action" value="submit_wp_contact_form" />

@@ -18,12 +18,18 @@
   <!-- Project overview -->
   <section class="content-section project-details-section">
     <div class="content-container">
-      <h1><?php echo esc_html( $project_title ); ?></h1>
-      <div class="location-container">
-        <i class="fa-solid fa-location-dot location-icon"></i>
-        <p class="project-location-text"><?php echo $project_location; ?></p>
-      </div>
-      <p><?php echo wp_kses_post( $project_description ); ?></p>
+      <?php if ( $project_title ) : ?>
+        <h1><?php echo esc_html( $project_title ); ?></h1>
+      <?php endif; ?>
+      <?php if ( $project_location ) : ?>
+        <div class="location-container">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <p class="project-location-text"><?php echo $project_location; ?></p>
+        </div>
+      <?php endif; ?>
+      <?php if ( $project_description ) : ?>
+        <p><?php echo wp_kses_post( $project_description ); ?></p>
+      <?php endif; ?>
       <div class="project-divider"></div>
     </div>
   </section>

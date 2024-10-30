@@ -26,8 +26,12 @@
   <!-- Portfolio overview -->
   <section class="content-section portfolio-section">
     <div class="content-container">
-      <h1><?php echo esc_html( $portfolio_heading ); ?></h1>
-      <p><?php echo wp_kses_post( $portfolio_description ); ?></p>
+      <?php if ( $portfolio_heading ) : ?>
+        <h1><?php echo esc_html( $portfolio_heading ); ?></h1>
+      <?php endif; ?>
+      <?php if ( $portfolio_description ) : ?>
+        <p><?php echo wp_kses_post( $portfolio_description ); ?></p>
+      <?php endif; ?>
     </div>
   </section>
 

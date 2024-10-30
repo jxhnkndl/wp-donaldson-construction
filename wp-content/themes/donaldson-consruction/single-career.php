@@ -18,11 +18,17 @@
   <!-- Project overview -->
   <section class="content-section project-details-section">
     <div class="content-container">
-      <h1 class="job-title"><?php echo esc_html( $job_title ); ?></h1>
-      <p class="job-location"><i class="fa-solid fa-location-dot job-location-icon"></i><?php echo esc_html( $job_location ) ?></p>
-      <div class="job-details">
-        <?php echo wp_kses_post( $job_description ); ?>
-      </div>
+      <?php if ( $job_title ) : ?>
+        <h1 class="job-title"><?php echo esc_html( $job_title ); ?></h1>
+      <?php endif; ?>
+      <?php if ( $job_location ) : ?>
+        <p class="job-location"><i class="fa-solid fa-location-dot job-location-icon"></i><?php echo esc_html( $job_location ) ?></p>
+      <?php endif; ?>
+      <?php if ( $job_description ) : ?>
+        <div class="job-details">
+          <?php echo wp_kses_post( $job_description ); ?>
+        </div>
+      <?php endif; ?>
       <div class="application-instructions">
         <h2>How To Apply</h2>
         <p>To apply for this position, please follow these instructions:</p>
